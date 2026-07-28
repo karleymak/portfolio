@@ -1,3 +1,189 @@
+body {
+    max-width:1000px;
+}
+
 h1 {
-    color:red;
+    font-family:Averia Gruesa Libre;
+    margin:0;
+    text-align:center;
+}
+
+h2 {
+    font-family:Outfit;
+    font-weight:300;
+    margin:0;
+    text-align:center;
+}
+
+#intro {
+    text-align:center;
+    padding-bottom:40px;
+}
+
+article {
+    text-align:center;
+}
+
+p {
+    font-family:Outfit;
+    font-weight:300;
+    text-align:center;
+}
+
+
+ul {
+   list-style-type: none;
+   font-family:Outfit;
+   font-weight:500;
+   padding:0;
+   text-align:center;
+}
+
+li:nth-child(3){
+    font-family:Averia Gruesa Libre;
+    line-height:0.8em;
+    display:none;
+}
+
+li {
+    padding-bottom:20px;
+}
+
+.btn {
+    background-color:rgb(198, 231, 242);
+    border:2px solid rgb(198, 231, 242);
+    display:inline-block;
+    padding:10px;
+    margin-top:10px;
+    border-radius:8px;
+    box-shadow: 3px 3px 0 darkgrey;
+}
+
+.btn:hover {
+    background-color:transparent;
+    border:2px solid rgb(198, 231, 242);
+}
+
+a {
+    text-decoration:none;
+    color:black;
+}
+
+#logo {
+    scale:2;
+    padding-top:40px;
+    padding-bottom:40px;
+    text-align:left;
+    transition: 1s;
+    text-align:center;
+}
+
+#logo:hover {
+    transform:rotate(90deg);
+    text-align:center;
+}
+
+button {
+    all:unset;
+    text-align:right;
+    margin-left:auto;
+    font-family:outfit;
+    font-size:30px;
+}
+
+.burger {
+    position:absolute;
+    top:25px;
+    right:25px;
+    cursor:pointer;
+}
+
+.burger span {
+    display:block;
+    height:3px;
+    width:25px;
+    background-color:black;
+    margin-bottom:5px;
+}
+
+#work p {
+    margin-top:60px;
+}
+
+#work article p {
+    margin:0;
+}
+
+article p {
+    text-align:right;
+}
+
+article img {
+    border-radius:8px;
+}
+
+.nav-overlay {
+    position:fixed;
+    inset:0;
+    background:white;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    opacity:0;
+    visibility:hidden;
+    transition: .35s ease;
+    z-index:2;
+}
+
+.nav-overlay.open {
+    opacity:1;
+    visibility:visible;
+}
+
+.close {
+    position:absolute;
+    top:25px;
+    right:25px;
+    cursor:pointer;
+}
+
+#card {
+    position:relative;
+    display:inline-block;
+}
+
+#info {
+    position: absolute;
+    bottom:0px;
+    right:0px;
+}
+
+
+
+
+
+
+
+
+@media (min-width: 900px) {
+
+    li:nth-child(3){
+        display:block;
+    }
+
+    #logo {
+        scale:1;
+        padding:0;
+    }
+
+    body {
+        margin-left:auto;
+        margin-right:auto;
+    }
+
+    article img {
+        width:90%;
+        text-align:center;
+    }
+    
 }

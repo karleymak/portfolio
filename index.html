@@ -3,17 +3,106 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Karley Makar</title>
+    <title>Karley Makar's Portfolio</title>
 
     <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Averia+Gruesa+Libre&family=Outfit:wght@100..900&display=swap" rel="stylesheet">
 
     <!-- normalize css -->
 
     <!-- link to css/js -->
     <link rel="stylesheet" href="styles.css">
+
+    <script src="script.js" defer></script>
 </head>
 <body>
-    <h1>welcome to my portfolio</h1>
-    <p></p>
+    <header>
+        <nav>
+            <button class="burger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <div class="nav-overlay">
+                <button class="close">
+                    X
+                </button>
+
+
+                <ul>
+                    <li><a href="index.html">Projects</a></li>
+                    <li><a href="play.html">Play</a></li>
+                    <li>karley<br>makar</li>
+                    <li><a href="about.html">About</a></li>
+                    <li>Contact</li>
+                </ul>
+            <div>
+        </nav>
+    </header>
+
+    <section id="intro">
+        <img src="images/circle-logo.png" width="50" id="logo" alt="my logo">
+        <h1>hello, nice to meet you!</h1>
+        <h2>I'm Karley, a Sacramento-based graphic designer.</h2>
+        
+        <p class="btn"><a href="#">email</a></p>
+        <p class="btn"><a href="#">resume</a></p>
+    </section>
+    
+    <section id="work">
+        <p>View some of my projects here</p>
+
+        <article>
+            <a href="shds.html" id="card">
+                <img src="images/shad-thumbnail.png" width="350" alt="student housing and dining thumbnail">
+            </a>
+            
+            <div id="info">
+                <p>Student Housing & Dining</p>
+                <p>View Design Gallery</p>
+            </div>
+            
+        </article>
+
+        <article>
+            <a href="climatekit.html">
+                <img src="images/climatehome-thumbnail.png" width="350" alt="climate home kit thumbnail">
+            </a>
+            
+            <p>Climate Home Kit</p>
+            <p>View Case Study</p>
+        </article>
+
+        <article>
+            <a href="greenhood.html">
+                <img src="images/greenhood-thumbnail.png" width="350" alt="greenhood thumbnail">
+            </a>
+            
+            <p>Greenhood</p>
+            <p>View Case Study</p>
+        </article>
+
+        <article>
+            <a href="cosmicapple.html">
+                <img src="images/cosmicapple-thumbnail.png" width="350" alt="cosmic apple thumbnail">
+            </a>
+            
+            <p>Cosmic Apple</p>
+            <p>View Case Study</p>
+        </article>
+
+        <article>
+            <a href="d3c.html">
+                <img src="images/d3c-thumbnail.png" width="350" alt="davis driven data change thumbnail">
+            </a>
+            
+            <p>Davis Driven Data Change</p>
+            <p>View Case Study</p>
+        </article>
+    </section>
+    
 </body>
 </html>
