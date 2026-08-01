@@ -1,5 +1,13 @@
 body {
+    margin:0;
+}
+
+.container {
     max-width:1000px;
+}
+
+header {
+    border:none;
 }
 
 h1 {
@@ -15,6 +23,24 @@ h2 {
     text-align:center;
 }
 
+h3 {
+    font-family:Outfit;
+    font-weight:300;
+    margin-top:100px;
+    font-size:30px;
+}
+
+h4 {
+    font-family:Outfit;
+    font-weight:500;
+    text-decoration: underline;
+    font-size:20px;
+}
+
+strong {
+    font-weight:600;
+}
+
 #intro {
     text-align:center;
     padding-bottom:40px;
@@ -22,12 +48,27 @@ h2 {
 
 article {
     text-align:center;
+    padding:10px;
 }
 
 p {
     font-family:Outfit;
     font-weight:300;
     text-align:center;
+}
+
+#content {
+    margin:20px;
+}
+
+#content p {
+    text-align:left;
+    font-size:15px;
+}
+
+#content img {
+    text-align:center;
+    margin:auto;
 }
 
 
@@ -53,10 +94,10 @@ li {
     background-color:rgb(198, 231, 242);
     border:2px solid rgb(198, 231, 242);
     display:inline-block;
-    padding:10px;
+    padding:8px;
     margin-top:10px;
-    border-radius:8px;
-    box-shadow: 3px 3px 0 darkgrey;
+    border-radius:20px;
+    box-shadow: 1px 1px 0 darkgrey;
 }
 
 .btn:hover {
@@ -120,6 +161,14 @@ article p {
 
 article img {
     border-radius:8px;
+    width:100%;
+    max-width:600px;
+    height:auto;
+    border: 2px solid white;
+}
+
+article img:hover {
+    border: 2px solid darkgray;
 }
 
 .nav-overlay {
@@ -147,16 +196,40 @@ article img {
     cursor:pointer;
 }
 
-#card {
-    position:relative;
-    display:inline-block;
+.reg-nav {
+    display:none;
 }
 
-#info {
-    position: absolute;
-    bottom:0px;
-    right:0px;
+.reg-nav a {
+    position: relative;
+    text-decoration: none;
+    color: black;
 }
+
+.reg-nav a::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -4px;
+    width: 0;
+    height: 2px;
+    background: black;
+    transform: translateX(-50%);
+    transition: width 0.3s ease;
+}
+
+.reg-nav a:hover::after {
+    width: 100%;
+}
+
+#details p:nth-child(2), #details p:nth-child(4){
+    display:none;
+}
+
+/* .images img {
+    width:90%;
+} */
+
 
 
 
@@ -166,9 +239,20 @@ article img {
 
 
 @media (min-width: 900px) {
+    header {
+        border-bottom: 1px solid black;
+    }
 
     li:nth-child(3){
         display:block;
+        font-family:outfit;
+    }
+
+    li:nth-child(4){
+        display:block;
+        font-size:26px;
+        font-family:Averia Gruesa Libre;
+        line-height:0.8em;
     }
 
     #logo {
@@ -176,14 +260,92 @@ article img {
         padding:0;
     }
 
-    body {
+    .container {
         margin-left:auto;
         margin-right:auto;
     }
 
     article img {
-        width:90%;
         text-align:center;
+        max-width:900px;
     }
+
+    .burger {
+        display:none;
+    }
+
+    .nav-overlay {
+        display:none;
+    }
+
+    .reg-nav {
+        display: block;
+        padding-top:20px;
+    }
+
+    .reg-nav ul {
+        display: flex;
+        justify-content: center;
+        gap:70px;
+        align-items: center;
+        list-style: none;
+        margin: 0;
+        padding:15px;
+        font-weight:300;
+    }
+
+    .reg-nav a {
+        text-decoration: none;
+    }
+
+    #intro {
+        text-align:left;
+        padding-left:60px;
+        padding-bottom:200px;
+        padding-top:50px;
+    }
+
+    h1 {
+        text-align:left;
+    }
+
+    h2 {
+        text-align:left;
+    }
+
+    #content img {
+        padding:5px;
+    }
+
+    #details {
+        display:flex;
+        gap:15px;
+    }
+
+    h3{
+        font-size:45px;
+    }
+
+    #details p:nth-child(2), #details p:nth-child(4){
+        display:block;
+    }
+
+    .description {
+        max-width: 500px;
+    }
+
+    .page {
+        display:grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap:10px;
+    }
+
+    /* .images img {
+        width:70%;
+    } */
+
+
+
+    
     
 }
