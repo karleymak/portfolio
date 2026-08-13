@@ -17,7 +17,7 @@
     
     window.addEventListener("load", (event) => {
         new cursoreffects.fairyDustCursor({
-            colors: ["#a7c957", "#2a9d8f", "#ef476f", '#6a4c93'],
+            colors: ["#a7c957", "#2a9d8f", "#ef476f"],
             fairySymbol: "★",
           });
     })
