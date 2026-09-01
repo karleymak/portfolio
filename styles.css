@@ -38,7 +38,9 @@
     font-style:italic;
 }
 
-
+* {
+    box-sizing: border-box;
+}
 
 html {
     scroll-behavior: smooth;
@@ -49,12 +51,13 @@ body {
     margin:0;
 }
 
-header {
+#main-header {
     padding-bottom:180px;
 }
 
 .container {
     max-width:1200px;
+    margin: 0 auto;
 }
 
 h1 {
@@ -73,13 +76,13 @@ h2 {
 }
 
 h3 {
-    font-weight:300;
-    margin-top:100px;
+    font-family:worksans;
     font-size:30px;
 }
 
 h4 {
-    font-weight:500;
+    font-family:worksans;
+    font-weight:200;
     text-decoration: underline;
     font-size:20px;
 }
@@ -93,6 +96,22 @@ strong {
     padding-bottom:40px;
 }
 
+.divider {
+    width: 100vw;
+    position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+    height: 22px;
+    display:flex;
+    overflow:hidden;
+}
+
+.square {
+    width:22px;
+    height:22px;
+    flex-shrink:0;
+}
+
 article {
     text-align:center;
     padding:10px;
@@ -103,16 +122,16 @@ p {
     font-weight:400;
 }
 
-#content {
+.content {
     margin:20px;
 }
 
-#content p {
+.content p {
     text-align:left;
     font-size:19px;
 }
 
-#content img {
+.content img {
     text-align:center;
     margin:auto;
 }
@@ -150,18 +169,8 @@ a {
     color:black;
 }
 
-#logo {
-    scale:2;
-    padding-top:40px;
-    padding-bottom:40px;
-    text-align:left;
-    transition: 1s;
-    text-align:center;
-}
-
-#logo:hover {
-    transform:rotate(90deg);
-    text-align:center;
+.context a {
+    text-decoration: underline;
 }
 
 button {
@@ -173,7 +182,7 @@ button {
 
 .burger {
     position:absolute;
-    top:25px;
+    top:35px;
     right:25px;
     cursor:pointer;
 }
@@ -184,6 +193,10 @@ button {
     width:25px;
     background-color:black;
     margin-bottom:5px;
+}
+
+#switch {
+    display:none;
 }
 
 .thumbnail {
@@ -244,7 +257,7 @@ button {
 .nav-overlay {
     position:fixed;
     inset:0;
-    background:white;
+    background:#FFFAF2;
     display:flex;
     justify-content:center;
     align-items:center;
@@ -294,10 +307,6 @@ button {
     width: 100%;
 }
 
-#details p:nth-child(2), #details p:nth-child(4){
-    display:none;
-}
-
 .images {
     display:none;
 }
@@ -311,9 +320,7 @@ button {
     display:flex;
 }
 
-#shdsimg {
-    text-align:center;
-}
+
 
 .d3c2 {
     border: 1px solid darkgray;
@@ -385,8 +392,105 @@ footer img {
     display:none;
 }
 
+.rectangle {
+    width:100%;
+    padding:10px;
+    background-color:#818aa3;
+    margin:0;
+    color:#fffaf0;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.rectangle span {
+    font-size:10px;
+}
+
+.rectangle a {
+    color:#FFFAF2;
+}
+
+
 #about {
     text-align:left;
+}
+
+.hero {
+    max-width:600px;
+    width:100%;
+    height:auto;
+    color:black;
+    border: 1px solid black;
+    border-radius: 30px 30px 0 0; 
+}
+
+.context img {
+    max-width:1200px;
+    width:100%;
+    color:black;
+    border: 1px solid black;
+    border-radius: 30px 30px 0 0; 
+}
+
+.arrows {
+    display:flex;
+    justify-content:space-between;
+    padding: 50px 20px 0 20px;
+}
+
+h4 span {
+    border:1px solid black;
+    border-radius:50%;
+    padding:10px;
+    text-decoration: none;
+    margin-right:4px;
+}
+
+.details h4, .details p {
+    margin-bottom:15px;
+}
+
+.caption {
+    font-weight:200;
+    margin-top:5px;
+    padding-bottom:30px;
+}
+
+#shdsimg {
+    width:100%;
+    margin:0 auto;
+    display:grid;
+    grid-template-columns: 1fr;
+    gap:20px;
+}
+
+#shdsimg img {
+    width:100%;
+    height:auto;
+    display:block;
+}
+
+#about {
+    margin:20px;
+    padding-top:30px;
+}
+
+#about h1 {
+    text-align:left;
+    padding-top:30px;
+}
+
+#about img {
+    width:100%;
+}
+
+#aboutpic img:nth-of-type(2), #aboutpic p {
+    display:none;
+}
+
+#about a {
+    text-decoration:underline;
 }
 
 
@@ -433,6 +537,20 @@ footer img {
     .reg-nav {
         display: block;
         padding-top:20px;
+        /* position:fixed;
+        top:0;
+        left:0;
+        width:100%;
+        z-index:3;
+        height:80px;
+        background:transparent;
+        transition:background-color 0.3s ease, backdrop-filter 0.3s ease; */
+    }
+
+    .reg-nav.scrolled {
+        background-color:rgba(255, 250, 240, 0.75);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
     }
 
     .reg-nav ul {
@@ -463,6 +581,19 @@ footer img {
         font-family: Basteleur;
     }
 
+    #switch {
+        display:block;
+        margin:auto;
+        position:relative;
+    }
+
+    #switch i {
+        position:absolute;
+        right:0;
+        top:40px;
+        cursor:pointer;
+    }
+
     #intro {
         text-align:left;
         padding-bottom:280px;
@@ -491,21 +622,8 @@ footer img {
         width:100%;
     }
 
-    #content img {
-        padding:5px;
-    }
-
-    #details {
-        display:flex;
-        gap:15px;
-    }
-
     h3{
         font-size:45px;
-    }
-
-    #details p:nth-child(2), #details p:nth-child(4){
-        display:block;
     }
 
     .description {
@@ -513,18 +631,17 @@ footer img {
     }
 
     .page {
-        display:grid;
         grid-template-columns: repeat(2, 1fr);
         gap:10px;
+    }
+
+    .context p {
+        max-width:50ch;
     }
 
     .images {
         display:block;
         text-align:center;
-    }
-
-    .context img {
-        display:none;
     }
 
     #plants {
@@ -592,6 +709,61 @@ footer img {
         padding:40px;
     }
 
+    .top-section {
+        display:flex;
+    }
+
+    .details {
+        padding-left:30px;
+        padding-bottom:30px;
+    }
+
+    #shdsimg {
+        display:block;
+        column-count:2;
+        column-gap:15px;
+        width:100%;
+    }
+
+    #shdsimg img {
+        width:100%;
+        display:block;
+        margin-bottom:15px;
+        break-inside:avoid;
+    }
+
+    .content p {
+        width:50ch;
+    }
+
+    .sidebyside {
+        display:flex;
+        gap:20px;
+        align-items:flex-end;
+    }
+
+    #about {
+        display:flex;
+        flex-direction:row-reverse;
+        gap:20px;
+    }
+
+    #about p {
+        width:50ch;
+    }
+
+    #aboutpic img:nth-of-type(2) {
+        display:block;
+    }
+
+    #aboutpic p {
+        display:block;
+    }
+
+    #mobile-about {
+        display:none;
+    }
+
     .desktop-footer {
         display:block;
     }
@@ -612,11 +784,12 @@ footer img {
 
     .footer-links {
         position:absolute;
-        right:300px;
-        bottom:50px;
-        background-color:white;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom:100px;
+        background-color:#FFFAF2;
         padding:20px;
-        box-shadow: 0 0 10px 2px rgba(255, 255, 255, 0.8);
+        box-shadow: 0 0 10px 2px rgba(255, 250, 240, 0.8);
         display:flex;
     }
 

@@ -8,6 +8,7 @@
     <!-- google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="icon" type="image/png" href="images/favicon.png">
     <link href="https://fonts.googleapis.com/css2?family=Averia+Gruesa+Libre&family=Outfit:wght@100..900&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -23,7 +24,7 @@
 <body>
 
     <div class="container">
-        <header>
+        <header id="main-header">
             <nav>
                 <button class="burger">
                     <span></span>
@@ -54,7 +55,12 @@
                     </ul>
                 </div>
             </nav>
+
+            <div class="divider" id="divider"></div>
+            <div id="switch"><i class="fa-solid fa-toggle-off fa-2xl" style="color: rgb(23, 23, 23);"></i></div>
         </header>
+
+        
 
         <section id="plants">
             <img id="plant2" src="images/plant-deco-03.png" width="600">
@@ -156,35 +162,22 @@
                     <p><a href="https://www.behance.net/karleym">behance</a></p>
                 </div>
 
-                <div>
-                    <p><a href="#intro">Back To Top</a></p>
-                    <img src="images/circle-logo.png" width="100" id="logo" alt="my logo">
-                </div>
             </div>
             
             
         </div>
 
         <img id="footer-img" src="images/footer.gif" width="1550">
-
-        <div class="mobile-footer">
-            <div>
-                <p><a href="https://www.linkedin.com/in/karley-m-33394031a/"><i class="fa-brands fa-linkedin fa-xl"></i></a></p>
-                <p><a href="https://www.instagram.com/karleydraws/"><i class="fa-brands fa-instagram fa-xl"></i></a></p>
-                <p><a href="https://www.behance.net/karleym"><i class="fa-brands fa-behance fa-xl"></i></a></p>
-            </div>
-
-            <div>
-                <p><a href="#intro">Back To Top</a></p>
-                <img src="images/circle-logo.png" width="100" id="logo" alt="my logo">
-            </div>
+        <div class="rectangle">
+            <p>karleym11@gmail.com</p>
+            <p>karley makar © 2026<br><span><a href="colophon">last updated</a> aug 28, 2026</span></p>
+            <p><a href="#divider"><i class="fa-regular fa-circle-up fa-2xl" style="color: rgb(255, 250, 240);"></i></a></p>
         </div>
-        
-        
 
     </footer>
     
     <script src="https://cdn.jsdelivr.net/npm/vanilla-tilt@1.8.1/dist/vanilla-tilt.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
 
     
 </body>
